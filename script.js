@@ -27,10 +27,6 @@ function renderCamisetas(resposta){
         camisetas.innerHTML += template;
     }
 }
-function pegarUltimaCamisetas(){
-    const ultimaCamiseta = document.querySelector(".camisetas li:last-child");
-    renderCamisetas();
-}
 function escolhaModelo(modeloCamiseta){
     let opAnterior = document.querySelector(".modelos1 .selecionado");
     if(opAnterior !== null) {
@@ -125,7 +121,7 @@ function montarPedido(){
 }
 function pedidoFeito(){
     alert("Seu pedido foi confirmado!");
-    pegarUltimaCamisetas();
+    renderCamisetas();
 }
 function erroPedido(erroPedido){
     alert("Ops, não conseguimos processar sua encomenda!");
