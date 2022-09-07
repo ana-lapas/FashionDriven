@@ -7,6 +7,30 @@ let pedidoCompleto;
 let modelo;
 let gola;
 let tecido;
+let template;
+let nome;
+function pegarNome(){
+    nome = prompt("Qual seu nome?");
+}
+function carregarCamisetas(){
+    const promise = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
+    promise.then(renderCamisetas);
+}
+function renderCamisetas(resposta){
+    const camisetas = document.querySelector(".camisetas");
+    camisetas.innerHTML = `<div class="tituloCamisetas">Ultimos pedidos</div>`;
+    for(let i = 0; i < 10; i++) {
+        template = `<li><div class="cardCamisetas">
+        <img class="blusaModelo" src=${resposta.data[i].image}/>
+        <span class="negrito">Criador:</span><span class="normal">${resposta.data[i].owner}</span>
+    </div></li>`;
+        camisetas.innerHTML += template;
+    }
+}
+function pegarUltimaCamisetas(){
+    const ultimaCamiseta = document.querySelector(".camisetas li:last-child");
+    renderCamisetas();
+}
 function escolhaModelo(modeloCamiseta){
     let opAnterior = document.querySelector(".modelos1 .selecionado");
     if(opAnterior !== null) {
@@ -16,9 +40,7 @@ function escolhaModelo(modeloCamiseta){
     let listas = opSelecionada.childNodes[1];
     listas.classList.add("selecionado");
     camisetaSelecionada = opSelecionada.childNodes[3].innerHTML;
-    console.log(camisetaSelecionada);
     liberarBotao();
-    
 }
 function escolhaGola(modeloGola){
     let opAnterior = document.querySelector(".modelos2 .selecionado");
@@ -29,8 +51,6 @@ function escolhaGola(modeloGola){
     let listas = opSelecionada.childNodes[1];
     listas.classList.add("selecionado");
     golaSelecionada = opSelecionada.childNodes[3].innerHTML;    
-    
-    console.log(golaSelecionada);
     liberarBotao();
 }
 function escolhaTecido(modeloTecido){
@@ -42,32 +62,25 @@ function escolhaTecido(modeloTecido){
     let listas = opSelecionada.childNodes[1];
     listas.classList.add("selecionado")
     tecidoSelecionado = opSelecionada.childNodes[3].innerHTML;
-    console.log(tecidoSelecionado);
     liberarBotao();
 }
 function pegarLink(){
     linkImg = document.getElementById("urlModelo").value;
-    console.log(linkImg)
     liberarBotao();
 }
 function liberarBotao(){    
     if(camisetaSelecionada !== undefined){
         if(golaSelecionada !== undefined){
             if(tecidoSelecionado !== undefined){
-                if(linkImg !== undefined){
+                if(linkImg !== undefined){                    
                     const botaoOff = document.getElementById("botaoFim");
-                    console.log(botaoOff);
                     const filhosBotao = botaoOff.childNodes;
-                    console.log(filhosBotao)
-                    botaoOff.classList.add("botaoOn");
-                    montarPedido();
-                    console.log("todosDefinidos!");  
-                }                
+                    botaoOff.classList.add("botaoOn");montarPedido();
+                    }                
             }
         }
     }
 }
-
 function montarPedido(){
     if(camisetaSelecionada = "T-shirt"){
         modelo = "t-shirt";
@@ -90,18 +103,36 @@ function montarPedido(){
     if(tecidoSelecionado = "Seda"){
         tecido = "silk"
     }
-    if(tecidoSelecionado = "Gola Polo"){
+    if(tecidoSelecionado = "Algodão"){
         tecido = "cotton"
     }
-    if(tecidoSelecionado = "Gola Polo"){
-        tecido = "polyester"
+    if(tecidoSelecionado = "Poliéster"){
+        tecido = "polyester";
     }
     pedidoCompleto = {
         "model": modelo,
         "neck": gola,
         "material": tecido, 
         "image": linkImg,
-        "owner": string,
-        "author": string            
-        }
+        "owner": nome,
+        "author": nome            
+    }
+    alert("Seu pedido foi feito!");
+    const promise = axios.post("https://mock-api.driven.com.br/api/v4/shirts-api/shirts", pedidoCompleto);
+    promise.then(pedidoFeito);
+    promise.catch(erroPedido);
+
 }
+function pedidoFeito(){
+    alert("Seu pedido foi confirmado!");
+    pegarUltimaCamisetas();
+}
+function erroPedido(erroPedido){
+    alert("Ops, não conseguimos processar sua encomenda!");
+    const tipoErro = erroPedido.response.status;
+   if(tipoErro = 422){
+        alert("Ocorreu o erro 422! Por favor, preencha seu pedido novamente no formato correto!");
+    } 
+}
+pegarNome();
+carregarCamisetas();
