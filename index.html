@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Fashion Driven</title>
+</head>
+<body>
+    <header><img class="logo" src="Img/Logo.png" /> </header>
+    <div class="conteudo">
+        <div class="menuEscolhas">
+            <div class="montagemCamiseta"> 
+                <div class="op1">
+                    <div class="tituloO"><p>Escolha o modelo</p></div>
+                    <div class="modelos1">
+                        <div class="possibilidade" onclick="escolhaModelo(this)">
+                            <img class="imgO" src="Img/tshirt.png" />
+                            <p>T-shirt</p>
+                        </div> 
+                        <div class="possibilidade" onclick="escolhaModelo(this)">
+                            <img class="imgO" src="Img/Camiseta.png" />
+                            <p>Camiseta</p>
+                        </div>
+                        <div class="possibilidade" onclick="escolhaModelo(this)">
+                            <img class="imgO" src="Img/Mangalonga.png" />
+                            <p>Manga Longa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="op2">
+                    <div class="tituloO"><p>Escolha a gola</p></div>
+                    <div class="modelos2">
+                        <div class="possibilidade" onclick="escolhaGola(this)">
+                            <img class="imgO" src="Img/GolaV.png" />
+                            <p>Gola V</p>
+                        </div> 
+                        <div class="possibilidade" onclick="escolhaGola(this)">
+                            <img class="imgO" src="Img/GolaRedonda.png" />
+                            <p>Gola Redonda</p></div>
+                        <div class="possibilidade" onclick="escolhaGola(this)">
+                            <img class="imgO" src="Img/GolaPolo.png" />
+                            <p>Gola Polo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="op3">
+                    <div class="tituloO"><p>Escolha o tecido</p></div>
+                    <div class="modelos3">
+                        <div class="possibilidade" onclick="escolhaTecido(this)">
+                            <img class="imgO" src="Img/Seda.png" />
+                            <p>Seda</p>
+                        </div> 
+                        <div class="possibilidade" onclick="escolhaTecido(this)">
+                            <img class="imgO" src="Img/Algodao.png" />
+                            <p>Algodão</p>
+                        </div>
+                        <div class="possibilidade" onclick="escolhaTecido(this)">
+                            <img class="imgO" src="Img/Poliester.png" />
+                            <p>Poliéster</p>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" onsubmit="pegarLink()">
+                <p class="ref">Imagem de Referência</p>
+                <input id="urlModelo" required type="url" placeholder="Insira o link">
+                <input id="botaoFim" type="submit" class="botao" value="Confirme Pedido"></input>
+                </form>
+            </div>
+        </div>
+        <div class="imgPrincipal"><img class="imgP" src="Img/ilustracao.png" /></div>        
+    </div>
+    </div>
+    <div class="menuInferior">         
+        <div class="camisetas">
+            <div class="tituloCamisetas">Ultimos pedidos</div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:<p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+            <div class="cardCamisetas">
+                <img class="blusaModelo" src="Img/Blusa1.png" />
+                <p class="negrito">Criador:</p><p class="normal">Nome da u</p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

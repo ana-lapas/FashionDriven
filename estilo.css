@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+header {
+    background-color: #404EED;
+    width: 100%;
+    height: 89px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: aqua;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.1px;
+}
+input{
+    width: 396.27px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    border: none;
+    margin-top: 9.5px;
+}
+
+.logo{
+    margin-left: 81px;
+    width: 280px;
+    height: 53px;
+}
+.conteudo{
+    margin-top: 89px;
+    background-color: palegreen;
+    display: flex;
+    flex-direction: row;
+}
+.menuEscolhas {
+    background-color: #fcfcfc;
+    width: 695.51px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 0;
+}
+.imgPrincipal {
+    background-color: #404EED;
+}
+.imgP{
+    margin-top: 89px;
+    height: 785px;
+    width: 670.5px;
+}
+.imgO{
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 8.5px;
+    border: 1px solid #c4c4c4;
+}
+.montagemCamiseta{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    
+}
+.op1, .op2, .op3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.modelos1, .modelos2, .modelos3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.possibilidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input::placeholder{
+    padding-left: 16px;
+    color: #818181;
+}
+.ref {
+    margin-top: 30px;
+}
+.selecionado{
+    border: 2px solid #404EED;
+}
+.botao{
+    background-color: #c4c4c4;
+    color: #ffffff;
+    height: 40px;
+    width: 398.6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23.44px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 36px;
+    margin-top: 23.76px;
+}
+.menuInferior{
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.botaoOn{
+    background-color: #404eed;
+}
+.camisetas{
+    width: 1075px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tituloCamisetas {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 28.2px;
+    margin-top: 30.5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.cardCamisetas{
+    background-color: red;
+    border-radius: 8px;
+    width: 202px;
+    height: 236.5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.blusaModelo{
+    width: 180px;
+    height: 180px;
+    display: flex;
+}
+.negrito{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 23.44px;
+}
+.nomeCriador{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 23.44px;
+}
